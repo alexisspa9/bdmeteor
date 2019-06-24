@@ -1,0 +1,175 @@
+<head>
+  <title>ParosPages</title>
+</head>
+
+<body>
+<nav class="navbar navbar-default">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Brand</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Link</a></li>
+        {{> loginButtons}}
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+
+
+  <div class="container">
+    <div class="row">
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#addCategory">
+        Add New Category
+      </button>
+      <h1>Welcome to Paros Pages</h1>
+        <ul class="list-group">
+          {{#each categories}}
+            {{>category}}
+          {{/each}}
+        </ul>
+    </div>
+  </div>
+    <div class="container">
+      <div class="row">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#addArea">
+          Add New Area
+        </button>
+        <ul class="list-group">
+          {{#each areas}}
+          {{>area}}
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  {{>addArea}}
+</body>
+
+
+<template name="category">
+  <li class="list-group-item">
+    {{name_en}} <br/>
+    {{name_el}} <br/>
+    {{tags_en}} <br />
+    {{tags_el}} <br />
+    {{eidos}} <br />
+    {{published}} <br />
+    <a href="#" class="delete-category">
+      <span class="glyphicon glyphicon-remove pull-right"></span>
+    </a>
+  </li>
+</template>
+
+
+
+<template name="addCategory">
+  <!-- Modal -->
+  <div class="modal fade" id="addCategory" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">New Category</h4>
+        </div>
+        <div class="modal-body">
+          <form class="add-category">
+            <div class="form-group">
+              <input type="text" name="name_en" class="form-control" placeholder="add name english">
+            </div>
+            <div class="form-group">
+              <input type="text" name="name_el" class="form-control" placeholder="add name greek">
+            </div>
+            <div class="form-group">
+              <input type="text" name="tags_en" class="form-control" placeholder="add tags english">
+            </div>
+            <div class="form-group">
+              <input type="text" name="tags_el" class="form-control" placeholder="add tags greek">
+            </div>
+            <div class="form-group">
+              <select name="eidos" class="form-control">
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <select name="published" class="form-control">
+                <option>true</option>
+                <option>false</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <input type="submit" class="btn btn-primary" value="Save" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+
+<template name="area">
+  <li class="list-group-item">
+    {{name_en}} <br />
+    {{name_el}} <br />
+    {{old_id}} <br />
+    <a href="#" class="delete-area">
+      <span class="glyphicon glyphicon-remove pull-right"></span>
+    </a>
+  </li>
+</template>
+
+
+
+<template name="addArea">
+  <!-- Modal -->
+  <div class="modal fade" id="addArea" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">New Area</h4>
+        </div>
+        <div class="modal-body">
+          <form class="add-area">
+            <div class="form-group">
+              <input type="text" name="name_en" class="form-control" placeholder="add name english">
+            </div>
+            <div class="form-group">
+              <input type="text" name="name_el" class="form-control" placeholder="add name greek">
+            </div>
+            <div class="form-group">
+              <input type="text" name="old_id" class="form-control" placeholder="old id">
+            </div>
+
+            <div class="form-group">
+              <input type="submit" class="btn btn-primary" value="Save" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+
