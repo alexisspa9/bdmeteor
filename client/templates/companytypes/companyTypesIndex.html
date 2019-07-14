@@ -1,0 +1,16 @@
+<template name="companyTypesIndex">
+    <div class="container">
+        <div class="row">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#addCompanyType">
+                Add New CompanyType
+            </button>
+            <ul class="list-group">
+                {{#each companytypes}}
+                {{>companytype}}
+                {{/each}}
+            </ul>
+            {{>addCompanyType}}
+        </div>
+    </div>
+</template>

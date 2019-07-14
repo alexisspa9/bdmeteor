@@ -1,0 +1,16 @@
+<template name="categoriesIndex">
+    <div class="container">
+        <div class="row">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#addCategory">
+                Add New Category
+            </button>
+            <ul class="list-group">
+                {{#each categories}}
+                {{>category}}
+                {{/each}}
+            </ul>
+            {{>addCategory}}
+        </div>
+    </div>
+</template>

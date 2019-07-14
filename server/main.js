@@ -1,6 +1,6 @@
 import { Meteor } from 'meteor/meteor';
 import { check } from 'meteor/check';
-import { Categories, Areas } from '../lib/collections';
+import { Categories, Areas, SubAreas, Companies, CompanyTypes, MainCategories } from '../lib/collections';
 import '/imports/api/methods';
 
 

@@ -1,0 +1,34 @@
+<template name="addMainCategory">
+    <!-- Modal -->
+    <div class="modal fade" id="addMainCategory" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">New MainCategory</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="add-maincategory">
+                        <div class="form-group">
+                            <input type="text" name="name_en" class="form-control" placeholder="add name english">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="name_el" class="form-control" placeholder="add name greek">
+                        </div>
+                        <div class="form-group">
+                            <select name="published" class="form-control">
+                                <option>true</option>
+                                <option>false</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-primary" value="Save" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

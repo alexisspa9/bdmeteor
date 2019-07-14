@@ -1,0 +1,77 @@
+<template name="addCompany">
+    <!-- Modal -->
+    <div class="modal fade" id="addCompany" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">New Company</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="add-company">
+                            <!-- company_type_id: company_type_id, -->
+                        <div class="form-group">
+                            <input type="text" name="name_en" class="form-control" placeholder="add name english">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="name_el" class="form-control" placeholder="add name greek">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="titlos_en" class="form-control" placeholder="add titlos english">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="titlos_el" class="form-control" placeholder="add titlos greek">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="url" class="form-control" placeholder="url">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-control" placeholder="email">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="facebook" class="form-control" placeholder="facebook">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="linkedin" class="form-control" placeholder="linkedin">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="twitter" class="form-control" placeholder="twitter">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="skype" class="form-control" placeholder="skype">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="tripadvisor" class="form-control" placeholder="tripadvisor">
+                        </div>
+                        
+                        <div class="form-group">
+                        <textarea name="text_en" id="text_en" cols="30" rows="10"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                        <textarea name="text_el" id="text_el" cols="30" rows="10"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <textarea name="notes" id="notes" cols="30" rows="10"></textarea>
+                        </div>
+
+
+                        <div class="form-group">
+                            <input type="checkbox" name="published">
+                        </div>
+
+
+                        <div class="form-group">
+                            <input type="text" name="old_id" class="form-control" placeholder="old id">
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-primary" value="Save" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

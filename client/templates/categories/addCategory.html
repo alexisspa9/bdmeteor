@@ -1,0 +1,48 @@
+<template name="addCategory">
+    <!-- Modal -->
+    <div class="modal fade" id="addCategory" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">New Category</h4>
+                    <button class="destroy-it">Destroy</button>
+                </div>
+                <div class="modal-body">
+                    <form class="add-category">
+                        <div class="form-group">
+                            <input type="text" name="name_en" class="form-control" placeholder="add name english">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="name_el" class="form-control" placeholder="add name greek">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="tags_en" class="form-control" placeholder="add tags english">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="tags_el" class="form-control" placeholder="add tags greek">
+                        </div>
+                        <div class="form-group">
+                            <select name="eidos" class="form-control">
+                                <option>0</option>
+                                <option>1</option>
+                                <option>2</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select name="published" class="form-control">
+                                <option>true</option>
+                                <option>false</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-primary" value="Save" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

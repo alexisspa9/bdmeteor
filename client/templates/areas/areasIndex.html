@@ -1,0 +1,16 @@
+<template name="areasIndex">
+    <div class="container">
+        <div class="row">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#addArea">
+                Add New Area
+            </button>
+            <ul class="list-group">
+                {{#each areas}}
+                {{>area}}
+                {{/each}}
+            </ul>
+            {{>addArea}}
+        </div>
+    </div>
+</template>

@@ -1,0 +1,16 @@
+<template name="subAreasIndex">
+    <div class="container">
+        <div class="row">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#addSubArea">
+                Add New SubArea
+            </button>
+            <ul class="list-group">
+                {{#each subareas}}
+                {{>subarea}}
+                {{/each}}
+            </ul>
+            {{>addSubArea}}
+        </div>
+    </div>
+</template>
