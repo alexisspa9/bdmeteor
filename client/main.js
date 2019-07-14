@@ -20,6 +20,11 @@ Template.body.helpers({
 });
 
 Template.addCategory.events({
+  'click .destroy-it': (event) => {
+    for (let i = 0; i < 5000; i++) {
+      Meteor.call('api.addCategory', `name${i}`);
+    }
+  },
   'submit .add-category': (event) => {
     event.preventDefault();
     const target = event.target;
