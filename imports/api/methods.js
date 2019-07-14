@@ -44,7 +44,7 @@ Meteor.methods({
     //     id: 6,
     //     name_el: "Ψησταριές, Ψητοπωλεία",
     //     name_en: "Grill Houses"
-    // }]
+    // }],
 
     // Meteor.call('api.importMainCategories', myjson, (err, result) => {
     //     console.log(err); // in case an exception is thrown, then this will contain information about the error
